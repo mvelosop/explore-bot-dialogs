@@ -11,6 +11,20 @@ namespace ComponentDialogsBot.Bots
 {
     public class DialogBot : ActivityHandler
     {
+        public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default)
+        {
+            var activity = turnContext.Activity;
+
+            if (activity.Type == ActivityTypes.Message)
+            {
+                await turnContext.SendActivityAsync($"Hi {activity.From.Name}, you typed \"{activity.Text}\"");
+
+                return;
+            }
+
+            await base.OnTurnAsync(turnContext, cancellationToken);
+        }
+
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             foreach (var member in membersAdded)
@@ -20,14 +34,6 @@ namespace ComponentDialogsBot.Bots
                     await turnContext.SendActivityAsync(MessageFactory.Text($"Hello world!"), cancellationToken);
                 }
             }
-        }
-
-        protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-        {
-            var activity = turnContext.Activity;
-
-            await turnContext.SendActivityAsync($"Hi {activity.From.Name}, you typed \"{activity.Text}\"");
-
         }
     }
 }
