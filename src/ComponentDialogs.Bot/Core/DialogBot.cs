@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-using ComponentDialogBot.Dialogs.Greeting;
 using ComponentDialogs.Bot.Dialogs.Greeting;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
@@ -11,7 +10,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ComponentDialogsBot.Bots
+namespace ComponentDialogs.Bot.Core
 {
     public class DialogBot : ActivityHandler
     {

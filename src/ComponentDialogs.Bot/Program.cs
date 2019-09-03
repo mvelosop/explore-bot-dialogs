@@ -6,7 +6,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ComponentDialogsBot
+namespace ComponentDialogs.Bot
 {
     public class Program
     {

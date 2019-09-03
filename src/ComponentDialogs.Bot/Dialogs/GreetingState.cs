@@ -1,4 +1,4 @@
-﻿namespace ComponentDialogBot.Dialogs.Greeting
+﻿namespace ComponentDialogs.Bot.Dialogs.Greeting
 {
     public class GreetingState
     {

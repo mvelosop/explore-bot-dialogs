@@ -4,7 +4,7 @@
 // Generated with Bot Builder V4 SDK Template for Visual Studio EmptyBot v4.5.0
 
 using ComponentDialogs.Bot.Dialogs.Greeting;
-using ComponentDialogsBot.Bots;
+using ComponentDialogs.Bot.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +18,7 @@ using Registration.Application.Contracts;
 using Registration.Application.Services;
 using Registration.Infrastructure;
 
-namespace ComponentDialogsBot
+namespace ComponentDialogs.Bot
 {
     public class Startup
     {

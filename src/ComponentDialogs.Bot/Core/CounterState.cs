@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-namespace ComponentDialogsBot.Bots
+namespace ComponentDialogs.Bot.Core
 {
     /// <summary>
     /// Stores counter state for the conversation.

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ComponentDialogsBot.Bots
+namespace ComponentDialogs.Bot.Core
 {
     public class ComponentDialogsBotAccessors
     {

@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CEEBF949-565E-4067-B95A-43E0229B7649}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentDialogsBot", "src\ComponentDialogsBot\ComponentDialogsBot.csproj", "{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentDialogs.Bot", "src\ComponentDialogs.Bot\ComponentDialogs.Bot.csproj", "{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Registration", "src\Registration\Registration.csproj", "{777728C0-7543-4E18-AFC9-750B2C321630}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{295EDB1B-60E1-4165-B44F-47DE78F5B8AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

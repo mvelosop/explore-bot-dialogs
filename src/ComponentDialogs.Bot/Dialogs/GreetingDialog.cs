@@ -1,5 +1,5 @@
-﻿using ComponentDialogBot.Dialogs.Greeting;
-using ComponentDialogsBot.Bots;
+﻿using ComponentDialogs.Bot.Dialogs.Greeting;
+using ComponentDialogs.Bot.Core;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Extensions.Logging;
