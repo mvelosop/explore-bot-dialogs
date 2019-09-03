@@ -7,7 +7,7 @@ using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace ComponentDialogs.Bot
+namespace ComponentDialogs.Bot.Core
 {
     public class AdapterWithErrorHandler : BotFrameworkHttpAdapter
     {
