@@ -16,13 +16,13 @@ namespace ComponentDialogs.Bot.Dialogs.Greeting
         public const string GreetingDialogId = nameof(GreetingDialogId);
         public const string TextPromptId = nameof(TextPromptId);
 
-        private readonly ComponentDialogsBotAccessors _accessors;
+        private readonly StateAccessors _accessors;
         private readonly IBotUserServices _botUserServices;
         private readonly ILogger<GreetingDialog> _logger;
 
         public GreetingDialog(
             ILogger<GreetingDialog> logger,
-            ComponentDialogsBotAccessors accessors,
+            StateAccessors accessors,
             IBotUserServices botUserServices)
             : base(GreetingDialogId)
         {

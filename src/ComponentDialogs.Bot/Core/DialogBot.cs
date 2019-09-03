@@ -14,13 +14,13 @@ namespace ComponentDialogs.Bot.Core
 {
     public class DialogBot : ActivityHandler
     {
-        private readonly ComponentDialogsBotAccessors _accessors;
+        private readonly StateAccessors _accessors;
         private readonly GreetingDialog _greetingDialog;
         private readonly ILogger<DialogBot> _logger;
 
         public DialogBot(
             ILogger<DialogBot> logger,
-            ComponentDialogsBotAccessors accessors,
+            StateAccessors accessors,
             GreetingDialog greetingDialog)
         {
             _logger = logger ?? throw new System.ArgumentNullException(nameof(logger));
@@ -39,7 +39,7 @@ namespace ComponentDialogs.Bot.Core
         {
             await base.OnTurnAsync(turnContext, cancellationToken);
 
-            await _accessors.ConversationState.SaveChangesAsync(turnContext);
+            await _accessors.SaveChangesAsync(turnContext);
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)

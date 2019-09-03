@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ComponentDialogs.Bot.Core
 {
-    public class ComponentDialogsBotAccessors
+    public class StateAccessors
     {
         private readonly Dictionary<string, object> _stateAccessors = new Dictionary<string, object>();
 
-        public ComponentDialogsBotAccessors(
+        public StateAccessors(
             ConversationState conversationState)
         {
             ConversationState = conversationState ?? throw new ArgumentNullException(nameof(conversationState));
@@ -31,8 +31,13 @@ namespace ComponentDialogs.Bot.Core
             return await accessor.GetAsync(context, () => new TState(), cancellationToken);
         }
 
+        public async Task SaveChangesAsync(ITurnContext turnContext)
+        {
+            await ConversationState.SaveChangesAsync(turnContext);
+        }
+
         public async Task<TState> SetAsync<TState>(ITurnContext context, Action<TState> updateAction, CancellationToken cancellationToken)
-            where TState : new()
+                    where TState : new()
         {
             var accessor = GetAccessor<TState>();
             var state = await accessor.GetAsync(context, () => new TState(), cancellationToken);
@@ -46,7 +51,7 @@ namespace ComponentDialogs.Bot.Core
 
         private IStatePropertyAccessor<TState> GetAccessor<TState>()
         {
-            var accessorKey = $"{nameof(ComponentDialogsBotAccessors)}.{typeof(TState).Name}";
+            var accessorKey = $"{nameof(StateAccessors)}.{typeof(TState).Name}";
             IStatePropertyAccessor<TState> accessor = null;
 
             if (_stateAccessors.ContainsKey(accessorKey))

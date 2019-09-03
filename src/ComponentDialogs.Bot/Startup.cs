@@ -34,7 +34,7 @@ namespace ComponentDialogs.Bot
         {
             services.AddSingleton<IStorage, MemoryStorage>();
             services.AddSingleton<ConversationState>();
-            services.AddSingleton<ComponentDialogsBotAccessors>();
+            services.AddSingleton<StateAccessors>();
 
             services.AddSingleton<RegistrationRepo>();
 
