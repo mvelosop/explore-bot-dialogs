@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CEEBF949-565E-4067-B95A-43E0229B7649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentDialogsBot", "src\ComponentDialogsBot\ComponentDialogsBot.csproj", "{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentDialogsBot", "src\ComponentDialogsBot\ComponentDialogsBot.csproj", "{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Registration", "src\Registration\Registration.csproj", "{777728C0-7543-4E18-AFC9-750B2C321630}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777728C0-7543-4E18-AFC9-750B2C321630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777728C0-7543-4E18-AFC9-750B2C321630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777728C0-7543-4E18-AFC9-750B2C321630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777728C0-7543-4E18-AFC9-750B2C321630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{26BD25AD-2D39-4816-84DD-7F9EDBDE1CBC} = {CEEBF949-565E-4067-B95A-43E0229B7649}
+		{777728C0-7543-4E18-AFC9-750B2C321630} = {CEEBF949-565E-4067-B95A-43E0229B7649}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {708BC95B-224D-4A1D-8F74-7824359AB0AC}

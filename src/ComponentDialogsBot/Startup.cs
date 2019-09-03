@@ -3,6 +3,7 @@
 //
 // Generated with Bot Builder V4 SDK Template for Visual Studio EmptyBot v4.5.0
 
+using ComponentDialogs.Bot.Dialogs.Greeting;
 using ComponentDialogsBot.Bots;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +14,9 @@ using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Connector.Authentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Registration.Application.Contracts;
+using Registration.Application.Services;
+using Registration.Infrastructure;
 
 namespace ComponentDialogsBot
 {
@@ -28,6 +32,14 @@ namespace ComponentDialogsBot
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IStorage, MemoryStorage>();
+            services.AddSingleton<ConversationState>();
+            services.AddSingleton<ComponentDialogsBotAccessors>();
+
+            services.AddSingleton<RegistrationRepo>();
+
+            services.AddScoped<IBotUserServices, BotUserServices>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // Create the Bot Framework Adapter.
@@ -35,6 +47,8 @@ namespace ComponentDialogsBot
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
             services.AddTransient<IBot, DialogBot>();
+            services.AddTransient<GreetingDialog>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
